@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Application</string>
+    <string name="hello_text">Hola, Estas en la sesión 2</string>
+    <string name="accept_button">Aceptar</string>
+    <string name="button_clicked">Le han dado click al botón!!</string>
+    <string name="add_text">Escribe tu nombre</string>
+
+    <string name="here_text">Aquí el texto del EditText</string>
+
+
+    <string name="name">Nombres(s)</string>
+    <string name="last_name">Apellidos</string>
+    <string name="phone">Teléfono</string>
+    <string name="email">Correo electrónico</string>
+</resources>

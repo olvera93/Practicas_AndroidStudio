@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:textColor="@color/gray"
+    android:background="@color/light_blue"
+    tools:context=".MainActivity">
+
+
+    <!-- {COLOCA AQUI EL CONTENIDO DEL LAYOUT} -->
+    <!--
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_text"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/beto" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:hint="@string/add_text"
+            android:textColorHint="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="24dp"
+            android:inputType="text"
+            android:maxLength="30"
+            android:drawableLeft="@drawable/boy"
+            android:drawablePadding="12dp"
+            />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:hint="@string/phone"
+            android:textColorHint="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:maxLength="10"
+            android:layout_marginHorizontal="24dp"
+            android:inputType="phone"
+            android:drawableLeft="@drawable/phone"
+            android:drawablePadding="12dp"
+            />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_marginTop="24dp"
+            android:textSize="18dp"
+            android:text="@string/here_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            />
+            -->
+
+    <ImageView
+        android:id="@+id/imageLogin"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/beto"
+        />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:hint="@string/name"
+        style="@style/editText"
+        android:inputType="textCapWords"
+        android:maxLength="25"
+        android:drawableStart="@drawable/user"
+        android:drawablePadding="12dp"
+        android:focusable="true"
+        />
+
+    <EditText
+        android:id="@+id/txtLastName"
+        android:hint="@string/last_name"
+        style="@style/editText"
+        android:inputType="textCapWords"
+        android:maxLength="30"
+        android:drawableStart="@drawable/user"
+        android:drawablePadding="12dp"
+        />
+
+    <EditText
+        android:id="@+id/txtPhone"
+        android:hint="@string/phone"
+        style="@style/editText"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:drawableStart="@drawable/phone"
+        android:drawablePadding="12dp"
+        />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:hint="@string/email"
+        style="@style/editText"
+        android:inputType="textEmailAddress"
+        android:maxLength="20"
+        android:drawableStart="@drawable/email"
+        android:drawablePadding="12dp"
+        />
+
+    <Button
+        android:id="@+id/btnAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/dark_blue"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="@string/accept_button"
+        android:textColor="@color/white" />
+
+</LinearLayout>
