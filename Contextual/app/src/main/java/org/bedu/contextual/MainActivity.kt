@@ -3,8 +3,10 @@ package org.bedu.contextual
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ContextMenu
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,5 +22,15 @@ class MainActivity : AppCompatActivity() {
         var inflater = menuInflater
         inflater.inflate(R.menu.menu_context, menu)
     }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        when(item?.itemId) {
+            R.id.copy -> {
+                Toast.makeText(this, "Copy", Toast.LENGTH_SHORT).show()
+            }
+        }
+        return super.onContextItemSelected(item)
+    }
+
 
 }
