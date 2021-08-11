@@ -2,6 +2,11 @@ package org.bedu.themes
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import android.widget.Toast
+import android.widget.Toolbar
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 
 class MainActivity : AppCompatActivity() {
@@ -35,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         transaction.commit()
     }
-/*
+
     //asignamos las acciones para cada opción del AppBar
     override fun onOptionsItemSelected(item_contact: MenuItem): Boolean {
         var msg = ""
@@ -52,5 +57,5 @@ class MainActivity : AppCompatActivity() {
     private fun setupDrawer(toolbar: Toolbar){
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
         val drawerToggle = ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open_drawer,R.string.close_drawer)
-    } */
+    }
 }

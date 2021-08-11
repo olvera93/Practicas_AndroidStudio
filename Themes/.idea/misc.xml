@@ -5,7 +5,12 @@
       <map>
         <entry key="..\:/Escritorio/PracticasAndroidStudio/Themes/app/src/main/res/drawable/menu.xml" value="0.2537037037037037" />
         <entry key="..\:/Escritorio/PracticasAndroidStudio/Themes/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Escritorio/PracticasAndroidStudio/Themes/app/src/main/res/layout/drawer_header.xml" value="0.13125" />
         <entry key="..\:/Escritorio/PracticasAndroidStudio/Themes/app/src/main/res/layout/fragment_login.xml" value="0.1" />
+        <entry key="..\:/Escritorio/PracticasAndroidStudio/Themes/app/src/main/res/layout/fragment_main.xml" value="0.13125" />
+        <entry key="..\:/Escritorio/PracticasAndroidStudio/Themes/app/src/main/res/layout/item_contact.xml" value="0.13125" />
+        <entry key="..\:/Escritorio/PracticasAndroidStudio/Themes/app/src/main/res/menu/drawer_menu.xml" value="0.12395833333333334" />
+        <entry key="..\:/Escritorio/PracticasAndroidStudio/Themes/app/src/main/res/menu/toolbar_menu.xml" value="0.12395833333333334" />
       </map>
     </option>
   </component>
