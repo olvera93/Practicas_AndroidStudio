@@ -3,10 +3,13 @@ package org.bedu.animations
 import android.animation.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.animation.AccelerateDecelerateInterpolator
+import android.view.animation.AccelerateInterpolator
 import android.view.animation.CycleInterpolator
 import android.view.animation.LinearInterpolator
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import org.bedu.animations.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        binding.root.setOnTouchListener { v, e -> moveAnyWhere(e)}
 
         binding.btnBarrel.setOnClickListener{
             barrelRoll()
@@ -43,7 +48,6 @@ class MainActivity : AppCompatActivity() {
         binding.btnPivot.setOnClickListener {
             pivot()
         }
-
 
 
     }
@@ -149,5 +153,25 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+    private fun moveAnyWhere(event: MotionEvent):Boolean {
+        if (event.action === MotionEvent.ACTION_DOWN) {
+            val x = event.x - binding.arwing.width/2
+            val y = event.y - binding.arwing.height/2
+
+            Toast.makeText(this, "valor: $y", Toast.LENGTH_SHORT).show()
+
+            binding.arwing.animate().apply {
+                x(x)
+                y(y)
+                duration = 1000
+                interpolator = AccelerateInterpolator()
+                start()
+            }
+
+        }
+
+        return true
+    }
 
 }
