@@ -1,6 +1,7 @@
 package org.bedu.sharedpreferences
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,10 +11,9 @@ import java.util.prefs.AbstractPreferences
 class MainActivity : AppCompatActivity() {
 
     companion object{
-        val PREFS_NAME = "org.bedu.sharedpreferences"
-        val STRING = "STRING"
-        val NUMBER = "NUMBER"
-        val BOOLEAN = "BOOLEAN"
+        val PREFS_NAME = "org.bedu.login"
+        val EMAIL = "email"
+        val IS_LOGGED = "is_logged"
     }
 
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
@@ -24,39 +24,39 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        preferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE) //Modo privado
+        preferences = getPreferences(Context.MODE_PRIVATE) //Modo privado
 
-        setValues()
 
-        binding.button.setOnClickListener {
+        binding.btnLogin.setOnClickListener {
             saveValues()
-
+            goToLogged()
         }
     }
 
-    private fun saveValues() {
-        val string = binding.etString.text.toString()
-        val number = binding.etNumber.text.toString().toFloat()
-        val boolean = binding.switch1.isChecked
+    override fun onStart() {
+        super.onStart()
 
+        if(isLogged()){
+            goToLogged()
+        }
+    }
+
+
+    private fun saveValues() {
+        val email = binding.etMail.text.toString()
         preferences.edit()
-            .putString(STRING, string)
-            .putBoolean(BOOLEAN, boolean)
-            .putFloat(NUMBER, number)
+            .putString(EMAIL, email)
+            .putBoolean(IS_LOGGED, true)
             .apply()
     }
 
-    private fun setValues(){
-        val string = preferences.getString(STRING, "")
-        val boolean = preferences.getBoolean(BOOLEAN,false)
-        val number = preferences.getFloat(NUMBER, 0f)
+    private fun goToLogged() {
+        val i = Intent(this, LoggedActivity::class.java)
+        i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(i)
+    }
 
-        with(binding) {
-            etString.setText(string)
-            switch1.isChecked = boolean
-            etNumber.setText(number.toString())
-        }
-
-
+    private fun isLogged():Boolean{
+        return preferences.getBoolean(IS_LOGGED, false)
     }
 }
