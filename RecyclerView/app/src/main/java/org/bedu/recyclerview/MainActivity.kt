@@ -3,25 +3,19 @@ package org.bedu.recyclerview
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
+import org.bedu.recyclerview.data.Game
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val recycler = findViewById<RecyclerView>(R.id.recycler)
+        val recycler = findViewById<RecyclerView>(R.id.recyclerGame)
 
         recycler.adapter = RecyclerAdapter(listOf(
-            Contact("Javier", "5511223344"),
-            Contact("Juan", "5522334455"),
-            Contact("Luis", "5533445566"),
-            Contact("Fernanda", "5544556677"),
-            Contact("Luisa", "5555667788"),
-            Contact("Manuel", "5566778899"),
-            Contact("Jose", "5577889900"),
-            Contact("Maria", "5588990011"),
-            Contact("Ana", "5599001122"),
-        ))
-
+            Game("Devil mary cry 5", "Teen", "Action Game", 4.0f, R.drawable.devil_may_cry_5),
+            Game("Sekiro: shadows dies twice", "Only Adults", "Game of the year", 3.0f, R.drawable.sekiro),
+            Game("Super smash bros ultimate", "Everyone", "Aventures", 5.0f, R.drawable.smash),
+            ))
     }
 }
