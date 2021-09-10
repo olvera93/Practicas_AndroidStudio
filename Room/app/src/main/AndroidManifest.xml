@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.bedu.roomvehicles">
 
+    <permission android:name="com.example.android.contentprovidersample.provider.READ_WRITE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomVehicles">
+
+        <provider
+            android:name=".provider.VehicleProvider"
+            android:authorities="org.bedu.roomvehicles.provider"
+            android:exported="true"
+            android:permission="org.bedu.roomvehicles.provider.READ_WRITE"/>
+
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
