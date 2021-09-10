@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var button: Button
 
     private val receiverTwo = ReceiverTwo()
+    private val airplaneReceiver = AirplaneReceiver()
 
     companion object {
         const val NAME = "NAME"
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             emit()
         }
+
+        registerAirplane()
     }
 
     override fun onStart() {
@@ -39,11 +42,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onStop() {
-
         super.onStop()
-
-
         unregisterReceiver(receiverTwo)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        unregisterReceiver(airplaneReceiver)
+    }
+
+    private fun registerAirplane() {
+        IntentFilter().apply {
+            addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED)
+        }.also { filter -> registerReceiver(airplaneReceiver, filter) }
     }
 
     private fun emit() {
