@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "546969497131",
+    "project_id": "bedupracticas-c83b4",
+    "storage_bucket": "bedupracticas-c83b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546969497131:android:aba93f5eb5c98ada9e446e",
+        "android_client_info": {
+          "package_name": "org.bedu.crashlytics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546969497131-8crn5mvceng9tgbofboffgnblab4dcej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8SdVv3fPRCWZLjzkZKHf7VFJ0XjDJI3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546969497131-8crn5mvceng9tgbofboffgnblab4dcej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
