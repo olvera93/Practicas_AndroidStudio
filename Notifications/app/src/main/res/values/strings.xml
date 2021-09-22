@@ -22,4 +22,12 @@
     <string name="channel_courses">cursos</string>
     <string name="courses_description">Notificaciones acerca de cursos impartidos</string>
 
+    <string name="others_description">Otra descripcion</string>
+    <string name="channel_others">Otro canal</string>
+    <string name="simple_title_2">Bedu</string>
+    <string name="simple_body_2">¡Segunda notificación para probar los grupos!</string>
+
+    <string name="simple_title_3">Bedu</string>
+    <string name="simple_body_3">¡Y otra notificación extra!</string>
+
 </resources>

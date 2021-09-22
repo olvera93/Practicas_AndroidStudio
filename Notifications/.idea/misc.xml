@@ -5,7 +5,9 @@
       <map>
         <entry key="..\:/Escritorio/PracticasAndroidStudio/Notifications/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Escritorio/PracticasAndroidStudio/Notifications/app/src/main/res/layout/activity_bedu.xml" value="0.1" />
-        <entry key="..\:/Escritorio/PracticasAndroidStudio/Notifications/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Escritorio/PracticasAndroidStudio/Notifications/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Escritorio/PracticasAndroidStudio/Notifications/app/src/main/res/layout/notification_custom.xml" value="0.1" />
+        <entry key="..\:/Escritorio/PracticasAndroidStudio/Notifications/app/src/main/res/layout/notification_custom_expanded.xml" value="0.1" />
       </map>
     </option>
   </component>
