@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         const val CHANNEL_OTHERS = "OTROS"
         const val GRUPO_SIMPLE = "GRUPO_SIMPLE"
 
+        var notificationId = 0
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -157,7 +159,7 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         NotificationManagerCompat.from(this).run {
-            notify(90, notification)
+            notify(notificationId++, notification)
         }
     }
 
@@ -219,9 +221,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun cancelNotification() {
         NotificationManagerCompat.from(this).apply {
-            cancelAll()
+            //cancelAll()
+            cancel(42)
         }
-
-
     }
 }
