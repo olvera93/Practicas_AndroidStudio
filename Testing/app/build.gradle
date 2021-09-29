@@ -8,6 +8,17 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
+    sourceSets {
+        String sharedTestDir = 'src/sharedTest/java'
+        test {
+            java.srcDir sharedTestDir
+        }
+        androidTest {
+            java.srcDir sharedTestDir
+        }
+    }
+
+
     defaultConfig {
         applicationId "org.bedu.roomvehicles"
         minSdkVersion 21
@@ -38,6 +49,7 @@ android {
 
 dependencies {
 
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
     def room_version = "2.2.6"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -50,8 +62,6 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 
     // Room database
@@ -63,10 +73,21 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
 
     // librerías de test unitario
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.'
     testImplementation "com.google.truth:truth:1.1"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.2.1"
-    testImplementation "androidx.arch.core:core-testing:2.0.0"
+    testImplementation "androidx.arch.core:core-testing:2.0.0"// Architecture components core testing library
 
-
+    // librerías de instrumented test y android unit test
+    androidTestImplementation "junit:junit:4.12"
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.2.1"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:3.2.0"
+    androidTestImplementation "com.google.truth:truth:1.1"
+    androidTestImplementation "androidx.arch.core:core-testing:2.0.0"// Architecture components core testing library
+    androidTestImplementation "org.mockito:mockito-core:2.8.9" // mockito dependency
+    androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:2.12.1"
+    debugImplementation "androidx.fragment:fragment-testing:1.1.0-alpha07"
+    debugImplementation "androidx.test:core:1.2.0"
 }

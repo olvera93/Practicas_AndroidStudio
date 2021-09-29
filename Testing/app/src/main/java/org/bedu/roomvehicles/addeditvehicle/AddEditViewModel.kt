@@ -7,10 +7,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
+import org.bedu.roomvehicles.data.Repository
 import org.bedu.roomvehicles.data.VehicleRepository
 import org.bedu.roomvehicles.data.local.Vehicle
 
-class AddEditViewModel(private val vehicleRepository: VehicleRepository): ViewModel() {
+class AddEditViewModel(private val vehicleRepository: Repository): ViewModel() {
 
 
     private var _vehicleDone = MutableLiveData<Boolean>(false)
