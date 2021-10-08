@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "199995034573",
+    "project_id": "androidavanzado-d66f6",
+    "storage_bucket": "androidavanzado-d66f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199995034573:android:46afbb2f9a1e5663995284",
+        "android_client_info": {
+          "package_name": "com.bedu.auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199995034573-a5qsp0mv5ckp3qs1fto47p8hc1d0ois9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj5eJ6WLbFgbarvQAQ840mR55YrR236Fs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199995034573-a5qsp0mv5ckp3qs1fto47p8hc1d0ois9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

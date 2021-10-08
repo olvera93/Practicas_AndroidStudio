@@ -3,10 +3,15 @@ package org.bedu.camerax
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.hardware.Camera
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import org.bedu.camerax.databinding.ActivityMainBinding
+import android.provider.MediaStore
+
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -47,8 +52,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openCamera(){
-        val intent = Intent(this, CameraActivity::class.java)
-        startActivity(intent)
+        val launchIntent = Intent(this, CameraActivity::class.java)
+        launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        launchIntent.putExtra(
+            "android.intent.extras.CAMERA_FACING",
+            Camera.CameraInfo.CAMERA_FACING_FRONT
+        )
+        launchIntent.putExtra("android.intent.extras.LENS_FACING_FRONT", 1)
+        launchIntent.putExtra("android.intent.extra.USE_FRONT_CAMERA", true)
+
+        startActivity(launchIntent)
+
     }
 
     private fun requestPermission() {
