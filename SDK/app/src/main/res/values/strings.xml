@@ -12,6 +12,9 @@
 
     <string name="err_spotify_disconnected">"Spotify is not Connected. Use one of the 'connect' buttons"</string>
     <string name="err_generic_toast">An error has occurred. Check the logs to know more.</string>
+    <string name="facebook_app_id">568366367729754</string>
+    <string name="fb_login_protocol_scheme">fb568366367729754</string>
+
 
     <!--  SPOTIFY  -->
     <string name="connect">Connect</string>
