@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">PropertyAnimation</string>
+    <string name="rotate">Rotate</string>
+    <string name="translate">Translate</string>
+    <string name="scale">Scale</string>
+    <string name="fade">Fade</string>
+    <string name="shower">Shower</string>
+    <string name="sky_color">Sky Color</string>
+
+</resources>
