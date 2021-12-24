@@ -16,6 +16,7 @@ buildscript {
         version_navigation = "1.0.0"
         version_retrofit = "2.9.0"
         version_recyclerview = "1.0.0"
+
     }
 
     repositories {
