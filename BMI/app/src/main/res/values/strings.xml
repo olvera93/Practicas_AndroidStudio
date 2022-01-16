@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BMI</string>
+
+    <string name="calculate_bmi">CALCULATE YOUR BMI</string>
+    <string name="btn_calculate">CALCULATE</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="meters">m</string>
+    <string name="kilogram">Kg</string>
+    <string name="recalculate">RECALCULATE</string>
+
+    <string name="your_result">Your Result</string>
+
+    <string name="eat_more_pies">Eat more pies</string>
+    <string name="fit_as_fiddle">Fit as a fiddle!</string>
+    <string name="eat_less_pies">Eat less pies</string>
+
+</resources>

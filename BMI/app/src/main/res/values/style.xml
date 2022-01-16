@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/slider_color</item>
+        <item name="colorOnPrimary">@color/slider_color</item>
+        <item name="colorOnSurface">@color/slider_color</item>
+    </style>
+
+</resources>
