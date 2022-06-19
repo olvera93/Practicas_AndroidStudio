@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Stores - MVVM</string>
+    <string name="description_img_photo">Imagen de la tienda</string>
+    <string name="description_store_add">Crear tienda</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_name">Nombre de la tienda</string>
+    <string name="helper_required">Requerido</string>
+    <string name="hint_phone">Teléfono</string>
+    <string name="hint_website">url del sitio web</string>
+    <string name="hint_photo_url">url de la imagen</string>
+    <string name="edit_store_title_add">Crear tienda</string>
+    <string name="menu_save">Save</string>
+</resources>
