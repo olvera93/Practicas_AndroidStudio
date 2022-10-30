@@ -8,7 +8,7 @@ import com.olvera.stores_mvvm.databinding.ActivityMainBinding
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 
-class MainActivity : AppCompatActivity(), OnClickListener {
+class MainActivity : AppCompatActivity(), OnClickListener, MainAux {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         fragmentTransaction.add(R.id.containerMain, fragment)
         fragmentTransaction.commit()
         fragmentTransaction.addToBackStack(null)
-        binding.fab.hide()
+        hideFab()
     }
 
     private fun setupRecyclerView() {
@@ -96,5 +96,20 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 mAdapter.delete(store)
             }
         }
+    }
+
+    /**
+     * MainAux
+     */
+    override fun hideFab(isVisible: Boolean) {
+        if (isVisible) binding.fab.show() else binding.fab.hide()
+    }
+
+    override fun addStore(storeEntity: StoreEntity) {
+        mAdapter.add(storeEntity)
+    }
+
+    override fun updateStore(storeEntity: StoreEntity) {
+
     }
 }

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/common_padding_min"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLiteList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_btn_lite_list"
+        app:icon="@drawable/ic_format_list_48"
+        app:iconGravity="top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnArtistMap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnArtistMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_btn_artist_list"
+        app:icon="@drawable/ic_map_48"
+        app:iconGravity="top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        />
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnFormMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_btn_form_lite"
+        app:icon="@drawable/ic_fact_check_48"
+        app:iconGravity="top"
+        app:layout_constraintStart_toEndOf="@+id/btnArtistMap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/common_padding_min"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnArtistMap"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFirstMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_first_map"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNewProcessor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_new_processor"
+                />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPanorama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_panorama"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MapsBasics</string>
+    <string name="main_btn_lite_list">List Map</string>
+    <string name="main_btn_artist_list">"Artists "</string>
+    <string name="main_btn_form_lite">Form Map</string>
+    <string name="btn_panorama">StreetView</string>
+    <string name="btn_new_processor">Nuevo procesador</string>
+    <string name="btn_first_map">Primer mapa</string>
+</resources>
