@@ -39,6 +39,8 @@ android {
 }
 
 def maps_version = "18.1.0"
+def lifecycle_version = "2.5.1"
+def corrutines_version = "1.6.1"
 
 dependencies {
 
@@ -49,6 +51,12 @@ dependencies {
 
     // Maps
     implementation "com.google.android.gms:play-services-maps:$maps_version"
+
+    // LifeCycleScope
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+
+    // corrutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$corrutines_version"
 
 
     testImplementation 'junit:junit:4.13.2'
