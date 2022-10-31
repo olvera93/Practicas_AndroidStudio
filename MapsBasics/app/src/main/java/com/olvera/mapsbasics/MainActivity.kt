@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             btnFirstMap.setOnClickListener  (this@MainActivity)
             btnNewProcessor.setOnClickListener (this@MainActivity)
             btnPanorama.setOnClickListener (this@MainActivity)
-
+            btnCameraView.setOnClickListener (this@MainActivity)
             // Apps
             btnLiteList.setOnClickListener (this@MainActivity)
             btnArtistMap.setOnClickListener (this@MainActivity)
@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 R.id.btnFirstMap -> startActivity(Intent(this, FirstMapActivity::class.java))
                 R.id.btnNewProcessor -> startActivity(Intent(this, NewProcessorActivity::class.java))
                 R.id.btnPanorama -> startActivity(Intent(this, PanoramaActivity::class.java))
+                R.id.btnCameraView -> startActivity(Intent(this, CameraViewActivity::class.java))
 
                 // Apps
                 R.id.btnLiteList -> startActivity(Intent(this, FirstMapActivity::class.java))

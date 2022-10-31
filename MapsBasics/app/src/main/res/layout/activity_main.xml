@@ -87,6 +87,13 @@
                 android:text="@string/btn_panorama"
                 />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCameraView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_camera_view"
+                />
+
         </LinearLayout>
 
     </ScrollView>
