@@ -7,4 +7,5 @@
     <string name="btn_new_processor">Nuevo procesador</string>
     <string name="btn_first_map">Primer mapa</string>
     <string name="btn_camera_view">Vista y camara</string>
+    <string name="btn_control_gestures">Control y gestos</string>
 </resources>

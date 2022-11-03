@@ -92,10 +92,14 @@ class CameraViewActivity : AppCompatActivity(), OnMapReadyCallback {
 
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(Locations.malaga, 10f))
 
-        lifecycleScope.launch {
+        /*lifecycleScope.launch {
             delay(2_000)
             map.animateCamera(CameraUpdateFactory.newLatLngBounds(malagaDowntownBounds, dp(32)))
-        }
+        }*/
+
+        //map.animateCamera(CameraUpdateFactory.newLatLngBounds(malagaDowntownBounds, dp(100), dp(100), dp(32)))
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(malagaDowntownBounds.center, 13.5f))
+        map.setLatLngBoundsForCameraTarget(malagaDowntownBounds)
 
 
     }
