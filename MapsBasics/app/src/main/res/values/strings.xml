@@ -14,4 +14,11 @@
     <string name="btn_terrain">Terreno</string>
     <string name="btn_none">N/A</string>
     <string name="btn_event">Eventos</string>
+
+
+    <string name="location_permission_denied">Permiso denegado. Por favor intente de nuevo y otorgue el permiso de ubicación.\nSi el permiso ha sido denegado permanentemente, este puede habilitarse en Configuración &gt; Aplicaciones &gt; Maps Basics.</string>
+    <string name="permission_required_toast">El permiso de ubicación es requerido.</string>
+    <string name="permission_rationale_location">Se requiere acceder al servicio de ubicación</string>
+    <string name="btn_my_location">Mi ubicacion</string>
+
 </resources>

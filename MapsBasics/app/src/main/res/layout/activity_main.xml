@@ -108,6 +108,13 @@
                 android:text="@string/btn_event"
                 />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMyLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_my_location"
+                />
+
         </LinearLayout>
 
     </ScrollView>
