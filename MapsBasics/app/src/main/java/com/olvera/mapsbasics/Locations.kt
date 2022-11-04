@@ -7,4 +7,5 @@ object Locations {
     val reforma = LatLng(19.442691514642658, -99.16749720876025)
     val malaga = LatLng(36.72029468844457, -4.421817632178133)
     val medillin = LatLng(6.249077199277291, -75.57011615175826)
+    val valenciaHill = LatLng(39.48946560105884, -0.42730433922732014)
 }

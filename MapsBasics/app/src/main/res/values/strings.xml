@@ -13,4 +13,5 @@
     <string name="btn_satellite">Satellite</string>
     <string name="btn_terrain">Terreno</string>
     <string name="btn_none">N/A</string>
+    <string name="btn_event">Eventos</string>
 </resources>

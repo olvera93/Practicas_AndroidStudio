@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             btnPanorama.setOnClickListener (this@MainActivity)
             btnCameraView.setOnClickListener (this@MainActivity)
             btnControlGestures.setOnClickListener (this@MainActivity)
-
+            btnEvents.setOnClickListener (this@MainActivity)
             // Apps
             btnLiteList.setOnClickListener (this@MainActivity)
             btnArtistMap.setOnClickListener (this@MainActivity)
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 R.id.btnPanorama -> startActivity(Intent(this, PanoramaActivity::class.java))
                 R.id.btnCameraView -> startActivity(Intent(this, CameraViewActivity::class.java))
                 R.id.btnControlGestures -> startActivity(Intent(this, ControlGesturesActivity::class.java))
-
+                R.id.btnEvents -> startActivity(Intent(this, EventsActivity::class.java))
                 // Apps
                 R.id.btnLiteList -> startActivity(Intent(this, FirstMapActivity::class.java))
                 R.id.btnArtistMap -> startActivity(Intent(this, FirstMapActivity::class.java))
