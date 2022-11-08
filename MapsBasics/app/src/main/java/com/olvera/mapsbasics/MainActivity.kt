@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             btnControlGestures.setOnClickListener (this@MainActivity)
             btnEvents.setOnClickListener (this@MainActivity)
             btnMyLocation.setOnClickListener (this@MainActivity)
+            btnMarker.setOnClickListener (this@MainActivity)
             // Apps
             btnLiteList.setOnClickListener (this@MainActivity)
             btnArtistMap.setOnClickListener (this@MainActivity)
@@ -47,6 +48,8 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 R.id.btnControlGestures -> startActivity(Intent(this, ControlGesturesActivity::class.java))
                 R.id.btnEvents -> startActivity(Intent(this, EventsActivity::class.java))
                 R.id.btnMyLocation -> startActivity(Intent(this, MyLocationActivity::class.java))
+                R.id.btnMarker -> startActivity(Intent(this, MarkerActivity::class.java))
+
                 // Apps
                 R.id.btnLiteList -> startActivity(Intent(this, FirstMapActivity::class.java))
                 R.id.btnArtistMap -> startActivity(Intent(this, FirstMapActivity::class.java))

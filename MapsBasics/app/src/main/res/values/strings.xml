@@ -20,5 +20,6 @@
     <string name="permission_required_toast">El permiso de ubicación es requerido.</string>
     <string name="permission_rationale_location">Se requiere acceder al servicio de ubicación</string>
     <string name="btn_my_location">Mi ubicacion</string>
+    <string name="btn_my_marker">Marcadores</string>
 
 </resources>
