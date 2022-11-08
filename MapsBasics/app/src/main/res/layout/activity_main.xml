@@ -122,6 +122,13 @@
                 android:text="@string/btn_my_marker"
                 />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnShapes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_shapes"
+                />
+
         </LinearLayout>
 
     </ScrollView>

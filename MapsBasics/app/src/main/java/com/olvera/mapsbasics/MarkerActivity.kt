@@ -15,8 +15,6 @@ import com.olvera.mapsbasics.databinding.ActivityFirstMapBinding
 class MarkerActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener,
     GoogleMap.OnMarkerDragListener {
 
-    private val TAG = "EventsActivity"
-
     private lateinit var binding: ActivityFirstMapBinding
     private lateinit var map: GoogleMap
 
@@ -53,6 +51,9 @@ class MarkerActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMark
         map.setOnMarkerClickListener(this)
         hillMarker?.isDraggable = true
         map.setOnMarkerDragListener(this)
+
+        // Custom info window
+        map.setInfoWindowAdapter(HillAdapter(this))
 
     }
 

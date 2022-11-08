@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="@dimen/common_padding_min"
+    android:paddingVertical="@dimen/common_padding_micro">
+
+    <ImageView
+        android:id="@+id/imgHill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_terrain_48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <RatingBar
+        android:id="@+id/rbScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressBackgroundTint="@color/purple_500"
+        android:layout_marginStart="@dimen/common_padding_min"
+        tools:rating="4.2"
+        app:layout_constraintStart_toEndOf="@id/imgHill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imgHill"
+        app:layout_constraintBottom_toBottomOf="@+id/imgHill"
+        style="?attr/ratingBarStyleSmall" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:text="Big Sur"
+        app:layout_constraintTop_toBottomOf="@id/imgHill"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceCaption"
+        android:lines="4"
+        android:ellipsize="end"
+        tools:text="macOS Big Sur desata el poder del sistema operativo más avanzado del mundo. El nuevo diseño garantiza una experiencia única en el Mac, Safari recibe la mayor actualización de su historia, Mapas y Mensajes estrenan prestaciones y ahora la gestión de tu privacidad es aún más transparente."
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
