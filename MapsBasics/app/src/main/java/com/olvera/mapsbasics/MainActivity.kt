@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             btnMyLocation.setOnClickListener (this@MainActivity)
             btnMarker.setOnClickListener (this@MainActivity)
             btnShapes.setOnClickListener (this@MainActivity)
+            btnGroundOverlay.setOnClickListener (this@MainActivity)
             // Apps
             btnLiteList.setOnClickListener (this@MainActivity)
             btnArtistMap.setOnClickListener (this@MainActivity)
@@ -51,6 +52,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 R.id.btnMyLocation -> startActivity(Intent(this, MyLocationActivity::class.java))
                 R.id.btnMarker -> startActivity(Intent(this, MarkerActivity::class.java))
                 R.id.btnShapes -> startActivity(Intent(this, PolylineActivity::class.java))
+                R.id.btnGroundOverlay -> startActivity(Intent(this, GroundOverlayActivity::class.java))
 
                 // Apps
                 R.id.btnLiteList -> startActivity(Intent(this, FirstMapActivity::class.java))

@@ -22,5 +22,6 @@
     <string name="btn_my_location">Mi ubicacion</string>
     <string name="btn_my_marker">Marcadores</string>
     <string name="btn_shapes">Formas</string>
+    <string name="btn_ground_overlay">Superposiciones de suelo</string>
 
 </resources>

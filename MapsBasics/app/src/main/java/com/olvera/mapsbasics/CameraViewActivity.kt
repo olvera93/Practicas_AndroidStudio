@@ -85,11 +85,6 @@ class CameraViewActivity : AppCompatActivity(), OnMapReadyCallback {
                 map.animateCamera(CameraUpdateFactory.scrollBy(0f, -150f))
                 delay(500)
             }*/
-
-        val malagaDowntownBounds = LatLngBounds(LatLng(36.69859225611359, -4.451033958294272),
-        LatLng(36.73732714402777, -4.410436045860529)
-        )
-
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(Locations.malaga, 10f))
 
         /*lifecycleScope.launch {
@@ -98,8 +93,8 @@ class CameraViewActivity : AppCompatActivity(), OnMapReadyCallback {
         }*/
 
         //map.animateCamera(CameraUpdateFactory.newLatLngBounds(malagaDowntownBounds, dp(100), dp(100), dp(32)))
-        map.animateCamera(CameraUpdateFactory.newLatLngZoom(malagaDowntownBounds.center, 13.5f))
-        map.setLatLngBoundsForCameraTarget(malagaDowntownBounds)
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(Locations.malagaDowntownBounds.center, 13.5f))
+        map.setLatLngBoundsForCameraTarget(Locations.malagaDowntownBounds)
 
 
     }

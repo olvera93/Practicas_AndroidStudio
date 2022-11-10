@@ -16,6 +16,13 @@
         android:theme="@style/Theme.MapsBasics"
         tools:targetApi="31">
         <activity
+            android:name=".GroundOverlayActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".PolylineActivity"
             android:exported="false">
             <meta-data
