@@ -9,4 +9,5 @@ object Locations {
     val medillin = LatLng(6.249077199277291, -75.57011615175826)
     val valenciaHill = LatLng(39.48946560105884, -0.42730433922732014)
     val valenciaVen = LatLng(10.15761768647013, -67.99751129511631)
+    val lima = LatLng(-12.047499759534457, -77.04198808324986)
 }

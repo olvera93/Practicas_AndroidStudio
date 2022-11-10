@@ -9,5 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="black_transparent">#80000000</color>
-
+    <color name="fill_polygon">#4D4CAF50</color>
+    <color name="stroke_polygon">#B34CAF50</color>
+    <color name="fill_circle">#66F44336</color>
+    <color name="stroke_circle">#B3F44336</color>
 </resources>
