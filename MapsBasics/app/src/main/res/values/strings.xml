@@ -23,5 +23,6 @@
     <string name="btn_my_marker">Marcadores</string>
     <string name="btn_shapes">Formas</string>
     <string name="btn_ground_overlay">Superposiciones de suelo</string>
+    <string name="btn_tile_overlay">Superposiciones de mosaicos</string>
 
 </resources>
