@@ -1,4 +1,4 @@
-package com.olvera.mapsbasics
+package com.olvera.mapsbasics.topics
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +11,9 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
+import com.olvera.mapsbasics.R
+import com.olvera.mapsbasics.common.Locations
+import com.olvera.mapsbasics.common.Utils
 import com.olvera.mapsbasics.databinding.ActivityFirstMapBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

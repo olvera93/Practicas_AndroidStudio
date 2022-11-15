@@ -1,4 +1,4 @@
-package com.olvera.mapsbasics
+package com.olvera.mapsbasics.topics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,7 +10,10 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
-import com.olvera.mapsbasics.Utils.dp
+import com.olvera.mapsbasics.R
+import com.olvera.mapsbasics.common.Utils.dp
+import com.olvera.mapsbasics.common.Locations
+import com.olvera.mapsbasics.common.Utils
 import com.olvera.mapsbasics.databinding.ActivityFirstMapBinding
 
 class ControlGesturesActivity : AppCompatActivity(), OnMapReadyCallback {

@@ -1,4 +1,4 @@
-package com.olvera.mapsbasics
+package com.olvera.mapsbasics.topics
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -6,7 +6,6 @@ import android.content.pm.PackageManager
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback
@@ -18,6 +17,9 @@ import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.MarkerOptions
+import com.olvera.mapsbasics.R
+import com.olvera.mapsbasics.common.Locations
+import com.olvera.mapsbasics.common.PermissionUtils
 import com.olvera.mapsbasics.databinding.ActivityFirstMapBinding
 
 class MyLocationActivity : AppCompatActivity(), OnMapReadyCallback, OnRequestPermissionsResultCallback, OnMyLocationClickListener, OnMyLocationButtonClickListener {

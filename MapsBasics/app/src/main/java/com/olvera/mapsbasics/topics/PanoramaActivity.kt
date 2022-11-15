@@ -1,4 +1,4 @@
-package com.olvera.mapsbasics
+package com.olvera.mapsbasics.topics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,7 @@ import com.google.android.gms.maps.StreetViewPanorama
 import com.google.android.gms.maps.SupportStreetViewPanoramaFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.StreetViewSource
+import com.olvera.mapsbasics.R
 
 class PanoramaActivity : AppCompatActivity(), OnStreetViewPanoramaReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {

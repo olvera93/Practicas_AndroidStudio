@@ -1,10 +1,11 @@
-package com.olvera.mapsbasics
+package com.olvera.mapsbasics.topics.infoWindow
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Marker
+import com.olvera.mapsbasics.R
 import com.olvera.mapsbasics.databinding.InfoHillBinding
 
 class HillAdapter(context: Context): GoogleMap.InfoWindowAdapter {

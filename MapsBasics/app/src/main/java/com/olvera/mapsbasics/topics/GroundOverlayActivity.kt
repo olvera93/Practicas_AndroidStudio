@@ -1,4 +1,4 @@
-package com.olvera.mapsbasics
+package com.olvera.mapsbasics.topics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,9 +10,10 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.GroundOverlayOptions
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.LatLngBounds
-import com.olvera.mapsbasics.Utils.dp
+import com.olvera.mapsbasics.R
+import com.olvera.mapsbasics.common.Utils.dp
+import com.olvera.mapsbasics.common.Locations
+import com.olvera.mapsbasics.common.Utils
 import com.olvera.mapsbasics.databinding.ActivityFirstMapBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -76,7 +77,8 @@ class GroundOverlayActivity : AppCompatActivity(), OnMapReadyCallback {
             map.setOnGroundOverlayClickListener {
                 Toast.makeText(this@GroundOverlayActivity, "Zone: ${it.tag}", Toast.LENGTH_SHORT).show()
             }
-            map.animateCamera(CameraUpdateFactory.newLatLngBounds(Locations.malagaDowntownBounds, dp(300), dp(100), dp(0)
+            map.animateCamera(CameraUpdateFactory.newLatLngBounds(
+                Locations.malagaDowntownBounds, dp(300), dp(100), dp(0)
             ), object: GoogleMap.CancelableCallback{
                 override fun onCancel() {
                     Toast.makeText(this@GroundOverlayActivity, "CANCEL", Toast.LENGTH_SHORT).show()

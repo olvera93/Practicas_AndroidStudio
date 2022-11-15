@@ -1,4 +1,4 @@
-package com.olvera.mapsbasics
+package com.olvera.mapsbasics.common
 
 import android.content.Context
 import android.graphics.Bitmap

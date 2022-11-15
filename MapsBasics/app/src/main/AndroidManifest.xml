@@ -16,77 +16,91 @@
         android:theme="@style/Theme.MapsBasics"
         tools:targetApi="31">
         <activity
-            android:name=".TileOverlayActivity"
+            android:name=".modes.SplitStreetViewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".GroundOverlayActivity"
+            android:name=".modes.LiteModeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".PolylineActivity"
+            android:name=".topics.TileOverlayActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MarkerActivity"
+            android:name=".topics.GroundOverlayActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MyLocationActivity"
+            android:name=".topics.PolylineActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".EventsActivity"
+            android:name=".topics.MarkerActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ControlGesturesActivity"
+            android:name=".topics.MyLocationActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".CameraViewActivity"
+            android:name=".topics.EventsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".PanoramaActivity"
+            android:name=".topics.ControlGesturesActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".NewProcessorActivity"
+            android:name=".topics.CameraViewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".FirstMapActivity"
+            android:name=".topics.PanoramaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".topics.NewProcessorActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".topics.FirstMapActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

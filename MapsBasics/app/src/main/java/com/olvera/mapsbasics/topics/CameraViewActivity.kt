@@ -1,20 +1,15 @@
-package com.olvera.mapsbasics
+package com.olvera.mapsbasics.topics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.CameraPosition
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.LatLngBounds
-import com.google.android.gms.maps.model.MarkerOptions
-import com.olvera.mapsbasics.Utils.dp
+import com.olvera.mapsbasics.R
+import com.olvera.mapsbasics.common.Locations
+import com.olvera.mapsbasics.common.Utils
 import com.olvera.mapsbasics.databinding.ActivityFirstMapBinding
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class CameraViewActivity : AppCompatActivity(), OnMapReadyCallback {
 

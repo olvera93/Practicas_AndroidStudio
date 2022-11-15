@@ -1,19 +1,25 @@
-package com.olvera.mapsbasics
+package com.olvera.mapsbasics.topics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener
+import com.google.android.gms.maps.GoogleMap.OnMarkerDragListener
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.olvera.mapsbasics.R
+import com.olvera.mapsbasics.common.Locations
 import com.olvera.mapsbasics.databinding.ActivityFirstMapBinding
 
-class MarkerActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener,
-    GoogleMap.OnMarkerDragListener {
+class EventsActivity : AppCompatActivity(), OnMapReadyCallback, OnMarkerClickListener, OnMarkerDragListener {
+
+    private val TAG = "EventsActivity"
 
     private lateinit var binding: ActivityFirstMapBinding
     private lateinit var map: GoogleMap
@@ -32,49 +38,45 @@ class MarkerActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMark
 
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
+
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(Locations.valenciaHill, 12f))
 
-        val hillMarker = map.addMarker(MarkerOptions().position(Locations.valenciaHill).title("Hill"))
+        val valenciaHill = map.addMarker(MarkerOptions().position(Locations.valenciaHill).title("Hill"))
+        var valenciaMaker: Marker? = null
+        map.setOnMapClickListener {
+            Toast.makeText(this, "Click", Toast.LENGTH_SHORT).show()
+            valenciaMaker = map.addMarker(MarkerOptions().position(Locations.valencia).title("Valencia, Spain").zIndex(2f))
+            valenciaHill?.zIndex = 1f
 
-        hillMarker?.run {
-            //setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
-            //setIcon(BitmapDescriptorFactory.defaultMarker(100f))
-            Utils.getBitmapFromVector(this@MarkerActivity, R.drawable.ic_terrain_48)?.let {
-                setIcon(BitmapDescriptorFactory.fromBitmap(it))
-            }
-            rotation = 320f
-            setAnchor(0.5f, 0.5f)
-            isFlat = true
-            snippet = "Central"
         }
 
+        map.setOnMapLongClickListener {
+            Toast.makeText(this, "Click largo", Toast.LENGTH_SHORT).show()
+            valenciaMaker?.remove()
+        }
+        valenciaHill?.tag = "Open to walk"
         map.setOnMarkerClickListener(this)
-        hillMarker?.isDraggable = true
+        valenciaHill?.isDraggable = true
         map.setOnMarkerDragListener(this)
-
-        // Custom info window
-        map.setInfoWindowAdapter(HillAdapter(this))
-
     }
 
     override fun onMarkerClick(marker: Marker): Boolean {
-        /*marker.showInfoWindow()
-        return true*/
+        Log.i(TAG, "onMarkerClick: ${marker.tag}")
         return false
+
     }
 
     override fun onMarkerDrag(marker: Marker) {
-        marker.alpha = 0.4f
+        Log.i(TAG, "onMarkerDrag: ${marker.position} ....")
     }
 
     override fun onMarkerDragEnd(marker: Marker) {
         binding.toggleGroup.visibility = View.VISIBLE
-        marker.title = "New location"
-        marker.snippet = "Welcome"
-        marker.alpha = 1.0f
     }
 
-    override fun onMarkerDragStart(p0: Marker) {
+    override fun onMarkerDragStart(marker: Marker) {
         binding.toggleGroup.visibility = View.INVISIBLE
     }
+
+
 }

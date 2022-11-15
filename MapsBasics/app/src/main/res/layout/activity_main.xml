@@ -143,6 +143,19 @@
                 android:text="@string/btn_tile_overlay"
                 />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLiteMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_lite_mode"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSplitStreetView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_split_street_view"
+                />
         </LinearLayout>
 
     </ScrollView>

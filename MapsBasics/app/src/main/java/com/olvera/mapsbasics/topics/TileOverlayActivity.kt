@@ -1,4 +1,4 @@
-package com.olvera.mapsbasics
+package com.olvera.mapsbasics.topics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +9,8 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.TileOverlayOptions
 import com.google.android.gms.maps.model.TileProvider
 import com.google.android.gms.maps.model.UrlTileProvider
+import com.olvera.mapsbasics.R
+import com.olvera.mapsbasics.common.Locations
 import com.olvera.mapsbasics.databinding.ActivityFirstMapBinding
 import java.net.URL
 import java.util.*

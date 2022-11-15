@@ -1,4 +1,4 @@
-package com.olvera.mapsbasics
+package com.olvera.mapsbasics.common
 
 import android.Manifest
 import android.app.AlertDialog
@@ -9,7 +9,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.DialogFragment
-
+import com.olvera.mapsbasics.R
 
 
 object PermissionUtils {

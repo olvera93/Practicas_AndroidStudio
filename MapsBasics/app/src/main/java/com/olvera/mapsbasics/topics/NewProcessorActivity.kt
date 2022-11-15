@@ -1,10 +1,11 @@
-package com.olvera.mapsbasics
+package com.olvera.mapsbasics.topics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.olvera.mapsbasics.R
 
 class NewProcessorActivity : AppCompatActivity(), OnMapReadyCallback, OnMapsSdkInitializedCallback {
     override fun onCreate(savedInstanceState: Bundle?) {

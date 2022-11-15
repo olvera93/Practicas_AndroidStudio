@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
 import com.olvera.mapsbasics.databinding.ActivityMainBinding
+import com.olvera.mapsbasics.modes.LiteModeActivity
+import com.olvera.mapsbasics.modes.SplitStreetViewActivity
+import com.olvera.mapsbasics.topics.*
 
 class MainActivity : AppCompatActivity(), OnClickListener {
 
@@ -30,12 +33,12 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             btnShapes.setOnClickListener (this@MainActivity)
             btnGroundOverlay.setOnClickListener (this@MainActivity)
             btnTileOverlay.setOnClickListener (this@MainActivity)
-
+            btnLiteMode.setOnClickListener (this@MainActivity)
             // Apps
             btnLiteList.setOnClickListener (this@MainActivity)
             btnArtistMap.setOnClickListener (this@MainActivity)
             btnFormMap.setOnClickListener (this@MainActivity)
-
+            btnSplitStreetView.setOnClickListener (this@MainActivity)
         }
 
 
@@ -56,6 +59,9 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 R.id.btnShapes -> startActivity(Intent(this, PolylineActivity::class.java))
                 R.id.btnGroundOverlay -> startActivity(Intent(this, GroundOverlayActivity::class.java))
                 R.id.btnTileOverlay -> startActivity(Intent(this, TileOverlayActivity::class.java))
+                R.id.btnLiteMode -> startActivity(Intent(this, LiteModeActivity::class.java))
+                R.id.btnSplitStreetView -> startActivity(Intent(this, SplitStreetViewActivity::class.java))
+
 
                 // Apps
                 R.id.btnLiteList -> startActivity(Intent(this, FirstMapActivity::class.java))

@@ -24,5 +24,9 @@
     <string name="btn_shapes">Formas</string>
     <string name="btn_ground_overlay">Superposiciones de suelo</string>
     <string name="btn_tile_overlay">Superposiciones de mosaicos</string>
+    <string name="card_lite_title">Malaga</string>
+    <string name="card_lite_description">Ven a visitarnos y disfruta de unas vacaciones increibles</string>
+    <string name="btn_lite_mode">Lite Mode</string>
+    <string name="btn_split_street_view">Pantalla dividida</string>
 
 </resources>
