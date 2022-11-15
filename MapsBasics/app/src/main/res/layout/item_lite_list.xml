@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/common_padding_min">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_padding_min">
+        
+        
+        <ImageView
+            android:id="@+id/itemPhoto"
+            android:layout_width="@dimen/img_item_map_size"
+            android:layout_height="@dimen/img_item_map_size"
+            tools:src="@drawable/ic_star"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_padding_min"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            tools:text="Nombre completo"
+            app:layout_constraintStart_toEndOf="@+id/itemPhoto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/itemPhoto"
+            app:layout_constraintBottom_toBottomOf="@+id/itemPhoto"
+            />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/itemMap"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:liteMode = "true"
+            app:mapType = "none"
+            app:layout_constraintTop_toBottomOf="@+id/itemPhoto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="4:1"
+            />
+        
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

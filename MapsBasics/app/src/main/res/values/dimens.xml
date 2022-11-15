@@ -8,5 +8,7 @@
     <dimen name="common_padding_middle">24dp</dimen>
     <dimen name="common_padding_large">64dp</dimen>
 
+    <dimen name="img_item_map_size">32dp</dimen>
+
 
 </resources>
