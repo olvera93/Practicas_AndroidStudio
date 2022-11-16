@@ -2,9 +2,14 @@ package com.olvera.mapsbasics.common
 
 import android.content.Context
 import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Paint
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toBitmap
 import androidx.viewbinding.ViewBinding
+import com.olvera.mapsbasics.R
+import kotlin.math.max
 
 object Utils {
 
@@ -19,5 +24,36 @@ object Utils {
 
     fun getBitmapFromVector(context: Context, resId: Int): Bitmap? {
         return AppCompatResources.getDrawable(context, resId)?.toBitmap()
+    }
+
+    fun getResizedBitmap( context: Context, image: Bitmap, maxSize: Int): Bitmap {
+        var width = image.width
+        var height = image.height
+        val bitmapRatio = width.toFloat() / height.toFloat()
+
+        if (bitmapRatio > 1) {
+            width = maxSize
+            height = (width) / bitmapRatio.toInt()
+        } else {
+            height = maxSize
+            width = (height) * bitmapRatio.toInt()
+        }
+
+        val imageResult = Bitmap.createBitmap(maxSize, maxSize, Bitmap.Config.ARGB_8888)
+        val imageResize = Bitmap.createScaledBitmap(image, width, height, true)
+
+        val canvas = Canvas(imageResult)
+        canvas.drawBitmap(imageResize, 0f, 0f, null)
+        val stroke = 4
+        val radius = maxSize / 2 - stroke / 2
+        val coordinate = (maxSize / 2).toFloat()
+        val paint = Paint()
+        paint.style = Paint.Style.STROKE
+        paint.color = ContextCompat.getColor(context, R.color.teal_200)
+        paint.strokeWidth = stroke.toFloat()
+        canvas.drawCircle(coordinate, coordinate, radius.toFloat(), paint)
+
+        return imageResult
+
     }
 }

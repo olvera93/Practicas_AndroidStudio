@@ -12,6 +12,7 @@ object Locations {
     val valenciaVen = LatLng(10.15761768647013, -67.99751129511631)
     val lima = LatLng(-12.047499759534457, -77.04198808324986)
     val cancun = LatLng(21.17001733827895, -86.8043472618593)
+    val usa = LatLng(39.760913481442486, -101.65430667050214)
 
     val malagaDowntownBounds = LatLngBounds(LatLng(36.69859225611359, -4.451033958294272),
         LatLng(36.73732714402777, -4.410436045860529)
