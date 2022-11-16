@@ -7,6 +7,6 @@ data class Artist(
     val photoUrl: String = "",
     val birthLocation: BirthLocation = BirthLocation()
 ) {
-    fun getFullName(): String = "{$name $surnames}"
+    fun getFullName(): String = "$name $surnames"
 
 }

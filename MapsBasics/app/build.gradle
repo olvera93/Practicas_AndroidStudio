@@ -42,7 +42,7 @@ def maps_version = "18.1.0"
 def lifecycle_version = "2.5.1"
 def corrutines_version = "1.6.1"
 def glide_version = "4.14.2"
-
+def gson_version = "2.10"
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -62,6 +62,9 @@ dependencies {
     // Glide
     implementation "com.github.bumptech.glide:glide:$glide_version"
     kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    //Gson
+    implementation "com.google.code.gson:gson:$gson_version"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
