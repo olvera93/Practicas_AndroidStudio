@@ -28,5 +28,9 @@
     <string name="card_lite_description">Ven a visitarnos y disfruta de unas vacaciones increibles</string>
     <string name="btn_lite_mode">Lite Mode</string>
     <string name="btn_split_street_view">Pantalla dividida</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_surnames">Apellidos</string>
+    <string name="hin_birth_location">Lugar de nacimiento</string>
+    <string name="form_btn_save">Guardar</string>
 
 </resources>

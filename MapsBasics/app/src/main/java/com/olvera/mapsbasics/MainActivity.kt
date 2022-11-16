@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
+import com.olvera.mapsbasics.artistForm.FormActivity
 import com.olvera.mapsbasics.artistList.LiteListActivity
 import com.olvera.mapsbasics.artistMap.ArtistMapActivity
 import com.olvera.mapsbasics.databinding.ActivityMainBinding
@@ -68,7 +69,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 // Apps
                 R.id.btnLiteList -> startActivity(Intent(this, LiteListActivity::class.java))
                 R.id.btnArtistMap -> startActivity(Intent(this, ArtistMapActivity::class.java))
-                R.id.btnFormMap -> startActivity(Intent(this, FirstMapActivity::class.java))
+                R.id.btnFormMap -> startActivity(Intent(this, FormActivity::class.java))
             }
         }
 

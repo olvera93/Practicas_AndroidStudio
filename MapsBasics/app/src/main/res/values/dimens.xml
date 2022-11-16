@@ -10,6 +10,7 @@
 
     <dimen name="img_item_map_size">32dp</dimen>
     <dimen name="img_map_size">56dp</dimen>
+    <dimen name="img_form_size">256dp</dimen>
 
 
 </resources>
