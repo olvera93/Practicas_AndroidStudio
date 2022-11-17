@@ -3,10 +3,7 @@ package com.olvera.mapsbasics.artistList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.RecyclerListener
-import com.olvera.mapsbasics.R
 import com.olvera.mapsbasics.common.dataAccess.FakeDatabase
 import com.olvera.mapsbasics.databinding.ActivityLiteListBinding
 
@@ -42,6 +39,6 @@ class LiteListActivity : AppCompatActivity() {
     }
 
     private fun getArtists() {
-        FakeDatabase.getArtist(this)?.let { adapter.submitList(it) }
+        FakeDatabase.getArtists(this)?.let { adapter.submitList(it) }
     }
 }

@@ -18,7 +18,22 @@ object FakeDatabase {
 
     private var result: List<Artist>? = null
 
-    fun getArtist(context: Context): List<Artist>? {
+    fun getArtist(context: Context): Artist? {
+        getArtists(context)?.let {
+            it[getIndexRandom()]
+        }
+
+        return null
+    }
+
+    private fun getIndexRandom():Int {
+        val time = System.currentTimeMillis().toString()
+        val lastNumbers = time.substring(time.length - 2, time.length).toInt()
+
+        return if (lastNumbers > 26) lastNumbers/4 else lastNumbers
+    }
+
+    fun getArtists(context: Context): List<Artist>? {
         result?.let { return it }
 
         result = loadObjectsFromJson(context, R.raw.new_style, object : TypeToken<ArrayList<Artist?>?>(){}.type)

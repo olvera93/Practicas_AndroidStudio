@@ -56,7 +56,7 @@ class ArtistMapActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun getArtist() {
         lifecycleScope.launch {
             setInProgress(true)
-            val fakeRemoveData = FakeDatabase.getArtist(this@ArtistMapActivity)
+            val fakeRemoveData = FakeDatabase.getArtists(this@ArtistMapActivity)
             delay(1_000)
             fakeRemoveData?.let { addArtistToMap(it) }
             setInProgress(false)

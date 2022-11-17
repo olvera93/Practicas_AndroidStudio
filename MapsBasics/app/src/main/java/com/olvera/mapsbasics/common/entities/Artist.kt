@@ -2,11 +2,15 @@ package com.olvera.mapsbasics.common.entities
 
 data class Artist(
     val id: String = "",
-    val name: String = "",
-    val surnames: String = "",
+    var name: String = "",
+    var surnames: String = "",
     val photoUrl: String = "",
-    val birthLocation: BirthLocation = BirthLocation()
+    var birthLocation: BirthLocation = BirthLocation()
 ) {
     fun getFullName(): String = "$name $surnames"
+
+    override fun toString(): String {
+        return "Name: $name\nSurnames: $surnames\n${birthLocation.customFormatDetails()}"
+    }
 
 }
