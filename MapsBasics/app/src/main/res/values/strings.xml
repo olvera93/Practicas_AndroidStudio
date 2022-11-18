@@ -32,5 +32,10 @@
     <string name="hint_surnames">Apellidos</string>
     <string name="hin_birth_location">Lugar de nacimiento</string>
     <string name="form_btn_save">Guardar</string>
+    <string name="form_description_marker">Marcador de ubicación</string>
+    <string name="dialog_map_title">Editar ubicación</string>
+    <string name="btn_location_save">Listo</string>
+    <string name="dialog_location_card_title">Ubicación seleccionada:</string>
+    <string name="dialog_address_invalid">Ubicación no valida</string>
 
 </resources>

@@ -3,7 +3,9 @@ package com.olvera.mapsbasics.artistForm
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
+import com.google.gson.Gson
 import com.olvera.mapsbasics.R
+import com.olvera.mapsbasics.common.Constants.BIRTH_LOCATION
 import com.olvera.mapsbasics.common.dataAccess.FakeDatabase
 import com.olvera.mapsbasics.common.entities.Artist
 import com.olvera.mapsbasics.common.entities.BirthLocation
@@ -48,6 +50,14 @@ class FormActivity : AppCompatActivity(), AuxLocation {
     private fun getArtist():Artist? = FakeDatabase.getArtist(this)
 
     private fun showMap() {
+        artist?.let {
+            val dialogFragment = LocationFragment(this)
+            var args = Bundle()
+            args.putString(BIRTH_LOCATION, Gson().toJson(it.birthLocation))
+            dialogFragment.arguments = args
+            val transaction = supportFragmentManager.beginTransaction()
+            dialogFragment.show(transaction, LocationFragment.TAG)
+        }
 
     }
 
